@@ -20,7 +20,7 @@ export default function Home() {
 	return (
 		<main className="flex flex-col items-center justify-center h-screen">
 			<h1 className="text-4xl font-bold text-center py-5">キチガイじゃんけん</h1>
-			<div className="flex flex-row flex-wrap w-full">
+			<div className="flex flex-col md:flex-row w-full gap-5">
 				<button
 					className={"btn btn-primary btn-lg mx-auto min-w-1/6"}
 					onClick={() => setUserChoice("gu")}

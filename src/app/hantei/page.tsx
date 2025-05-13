@@ -15,7 +15,7 @@ export default async function Page({
 		pa: "パー",
 	};
 	const translatedUserChoice = translatedChoices[userChoice as keyof typeof translatedChoices];
-	if(!userChoice || !translatedUserChoice) {
+	if (!userChoice || !translatedUserChoice) {
 		redirect("/");
 	}
 	const randomChoice = choices[Math.floor(Math.random() * choices.length)];
