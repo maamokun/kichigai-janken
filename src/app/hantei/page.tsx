@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
 
 export default async function Page({
 	searchParams,
@@ -14,6 +15,9 @@ export default async function Page({
 		pa: "パー",
 	};
 	const translatedUserChoice = translatedChoices[userChoice as keyof typeof translatedChoices];
+	if(!userChoice || !translatedUserChoice) {
+		redirect("/");
+	}
 	const randomChoice = choices[Math.floor(Math.random() * choices.length)];
 	const result =
 		userChoice === randomChoice
